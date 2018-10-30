@@ -50,6 +50,8 @@ namespace QuickLook
             {
                 ProcessHelper.WriteLog(((Exception) args.ExceptionObject).ToString());
             };
+            //Write readme to plugins dir
+            File.WriteAllText(Environment.CurrentDirectory + @"\QuickLook.Plugin\" + TranslationHelper.Get("Plugins_ReadMe_Filename") + ".txt", TranslationHelper.Get("Plugins_ReadMe_Contents"));
 
             base.OnStartup(e);
         }

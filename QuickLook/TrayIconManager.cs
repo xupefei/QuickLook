@@ -56,6 +56,7 @@ namespace QuickLook
                     new MenuItem(TranslationHelper.Get("Icon_CheckUpdate"), (sender, e) => Updater.CheckForUpdates()),
                     new MenuItem(TranslationHelper.Get("Icon_GetPlugin"),
                         (sender, e) => Process.Start("https://github.com/QL-Win/QuickLook/wiki/Available-Plugins")),
+                    new MenuItem(TranslationHelper.Get("Icon_ManagePlugin"), (sender, e) => Process.Start(Environment.CurrentDirectory + @"\QuickLook.Plugin")),
                     _itemAutorun,
                     new MenuItem(TranslationHelper.Get("Icon_Quit"),
                         (sender, e) => System.Windows.Application.Current.Shutdown())
